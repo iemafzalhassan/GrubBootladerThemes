@@ -15,7 +15,7 @@
 
 
 
-## :wrench: Installation Process :--
+## :wrench: Installation theme Process :--
 
 Custom Grub Bootloader themes
 
@@ -49,3 +49,24 @@ Custom Grub Bootloader themes
 - Reboot your PC
 
   
+## :wrench: Installation Grub Customizer Process :--
+
+- Add grub customizer repo:
+
+
+  ```
+  sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+  ```
+
+- install grub customizer
+
+
+  ```
+  sudo apt install grub-customizer
+  ```
+
+  
+  ```
+  sudo apt update
+  ```
+
