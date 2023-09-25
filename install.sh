@@ -201,3 +201,69 @@ function main() {
 }
 
 main
+
+sleep 10s
+
+###        installation process begins here for grub-customizer (debian-based)
+
+
+echo Author: iemafzalhassan
+sleep 3s
+
+echo hey...Folks.! ready to customise your bootloader..!
+sleep 2s
+
+echo 3s
+sleep 2s
+echo 2s
+sleep 1s
+echo 1s
+sleep 1s
+echo Booooom.....!!!!
+sleep 2s
+
+
+echo $(date)
+sleep 2s
+echo $(date)
+sleep 2s
+echo wait...installation begins...here.!
+sleep 2s
+
+
+##update checking...
+
+echo checking for update
+sleep 2s
+sudo apt update
+sleep 2s
+echo updating
+sleep 2s
+sudo apt upgrade
+sleep 2s
+echo cloning repo for installing grub customiser
+sleep 2s
+echo cloning repo from
+sleep 2s 
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sleep 2s
+##ckecking repo for update
+echo updating please wait..! 
+sleep 2s
+
+
+sudo apt update
+sudo apt upgrade -y
+sleep 2s
+sudo apt install grub-customizer -y
+sleep 2s
+
+echo grub-customiser installed
+sleep 2s
+echo checking lates build 
+sudo apt update 
+sudo apt upgrade -y
+
+echo updated...
+
+echo now you can customize the other efi-partion which pop-up while booting --BOOTLOADER
