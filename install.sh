@@ -208,8 +208,7 @@ sleep 10s
 
 
 echo Author: iemafzalhassan
-sleep 3s
-
+sleep 5s
 echo hey...Folks.! ready to customise your bootloader..!
 sleep 2s
 
