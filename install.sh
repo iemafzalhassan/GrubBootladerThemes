@@ -208,21 +208,7 @@ sleep 10s
 
 
 echo Author: iemafzalhassan
-
-
 sleep 5s
-
-
-
-echo Author: iemafzal hassan
-
-
-
-sleep 5s
-
-
-
-
 echo hey...Folks.! ready to customise your bootloader..!
 sleep 2s
 
@@ -280,4 +266,3 @@ sudo apt upgrade -y
 echo updated...
 
 echo now you can customize the other efi-partion which pop-up while booting --BOOTLOADER
-
