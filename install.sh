@@ -42,9 +42,9 @@ function echo_prompt() {    echo -ne "\033[0;36m${*}\033[0m "; }
 function splash() {
     local hr
     hr=" **$(printf "%${#1}s" | tr ' ' '*')** "
-    echo_title "${hr}"
+    echo_title "$hr"
     echo_title " * $1 * "
-    echo_title "${hr}"
+    echo_title "$hr"
     echo
 }
 
@@ -64,7 +64,7 @@ function select_theme() {
 
     PS3=$(echo_prompt '\nChoose The Theme You Want: ')
     select THEME_NAME in "${themes[@]}"; do
-        case "${THEME_NAME}" in
+        case "$THEME_NAME" in
             'CyberEXS')
                 splash 'Installing CyberEXS Theme...'
                 break;;
@@ -98,7 +98,7 @@ function select_theme() {
             'Quit')
                 echo_info 'User requested exit...!'
                 exit 0;;
-            *) echo_warning "invalid option \"${REPLY}\"";;
+            *) echo_warning "invalid option \"$REPLY\"";;
         esac
     done
 }
@@ -113,13 +113,13 @@ function install_theme() {
     # create themes directory if not exists
     if [[ ! -d "${THEME_DIR}/${THEME_NAME}" ]]; then
         # Copy theme
-        echo_primary "Installing ${THEME_NAME} theme..."
+        echo_primary "Installing $THEME_NAME theme..."
 
-        echo_info "mkdir -p \"${THEME_DIR}/${THEME_NAME}\""
-        mkdir -p "${THEME_DIR}/${THEME_NAME}"
+        echo_info "mkdir -p \"$THEME_DIR/$THEME_NAME\""
+        mkdir -p "$THEME_DIR/$THEME_NAME"
 
-        echo_info "cp -a ./themes/\"${THEME_NAME}\"/* \"${THEME_DIR}/${THEME_NAME}\""
-        cp -a ./themes/"${THEME_NAME}"/* "${THEME_DIR}/${THEME_NAME}"
+        echo_info "cp -a ./themes/\"$THEME_NAME\"/* \"$THEME_DIR/$THEME_NAME\""
+        cp -a ./themes/"$THEME_NAME"/* "$THEME_DIR/$THEME_NAME"
     fi
 }
 
@@ -144,13 +144,13 @@ function config_grub() {
 
     #--------------------------------------------------
 
-    echo_primary "Setting ${THEME_NAME} as default"
+    echo_primary "Setting $THEME_NAME as default"
     # remove theme if any
     echo_info "sed -i '/GRUB_THEME=/d' /etc/default/grub"
     sed -i '/GRUB_THEME=/d' /etc/default/grub
 
-    echo_info "echo \"GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"\" >> /etc/default/grub"
-    echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
+    echo_info "echo \"GRUB_THEME=\"$THEME_DIR/$THEME_NAME/theme.txt\"\" >> /etc/default/grub"
+    echo "GRUB_THEME=\"$THEME_DIR/$THEME_NAME/theme.txt\"" >> /etc/default/grub
     
     #--------------------------------------------------
 
@@ -222,9 +222,9 @@ echo Booooom.....!!!!
 sleep 2s
 
 
-echo $(date)
+echo "$(date)"
 sleep 2s
-echo $(date)
+echo "$(date)"
 sleep 2s
 echo wait...installation begins...here.!
 sleep 2s
