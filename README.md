@@ -28,13 +28,13 @@ Custom Grub Bootloader themes
 - Clone this repository
 
   ```
-  git clone https://github.com/johdasgran/mr-robot-theme.git
+  git clone https://github.com/iemafzalhassan/GrubBootladerThemes.git
   ```
 
 - Change directory to the Mr Robot Theme
 
   ```
-  cd mr-robot-theme
+  cd GrubBootladerThemes
   ```
 
 - Review install script at ./install.sh
