@@ -1,0 +1,49 @@
+# Backup files
+*.bak
+*.bak.*
+/etc/default/grub.bak*
+
+# Log files
+*.log
+/var/log/grub-theme-installer.log
+
+# Temporary files
+*.tmp
+/tmp/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+
+# Test artifacts
+tests/bash_unit
+tests/*.log
+
+# Build artifacts
+dist/
+build/
+*.tar.gz
+*.zip
+
+# Personal notes
+NOTES.md
+TODO.md
+
